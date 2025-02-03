@@ -1,0 +1,151 @@
+.teaser
+  flex-direction: column
+  width: 100%
+  margin-top: 22px
+  .teaser__item_container
+    display: flex
+    gap: 15px
+    @include media('sm')
+      flex-direction: column
+  &__title
+    font-family: Open Sans
+    font-size: 22px
+    font-weight: 700
+    line-height: 48px
+    text-align: start
+    color: var(--fontDarkColor)
+    margin: -33px 0 9px 0
+  &__item
+    padding: 7px 0
+    display: flex
+    width: 100%
+    text-align: center
+    @include media('md')
+      flex-direction: row
+    @include media('sm')
+      flex-direction: column
+      width: 100%
+  &__figure
+    width: 250px
+    flex-shrink: 0
+    margin: 0
+    @include media('md')
+      flex-direction: 250px
+    @include media('sm')
+      width: 100%
+    img
+      @include media('sm')
+        width: 100svw
+        left: -0.5rem
+        position: relative
+  &__content
+    padding-left: 1rem
+    margin: 0
+      
+  &__sub_pre_title
+    font-family: Open sans
+    font-size: 14px
+    font-weight: 700
+    line-height: 13px
+    text-align: left
+    color: var(--fontHighlightColor)
+    margin-top: 2px
+    @include media('sm')
+      margin-top: 1rem
+  &__sub_title
+    font-family: Open sans
+    font-size: 20px
+    font-weight: 500
+    line-height: 24px
+    text-align: left
+    color: var(--fontDarkColor)
+    margin: 8px 18px 0 0
+  &__description
+    font-family: Inter
+    font-size: 16px
+    font-weight: 400
+    line-height: 20px
+    text-align: left
+    color: var(--fontDarkColor)
+    margin-top: 6px
+    letter-spacing: 0.5px
+
+.teaser-row
+  display: flex
+  gap: 1rem
+  .teaser__item
+    width: 204px
+    flex-direction: column
+    flex-shrink: 0
+    padding: 1px 0px
+  .teaser__figure
+    width: 100%
+    img
+      width: 100% !important
+      left: unset
+      position: unset
+  .teaser__content
+    width: 100%
+    background: #F2F7FF
+    height: 246px
+    .teaser__sub_pre_title
+      font-family: Inter
+      letter-spacing: 0.3px
+      margin-top: 18px
+    .teaser__sub_title
+      margin: 24px 0 0 0
+      font-size: 18px
+
+.teaser-two
+  flex-direction: row
+  margin: -10px 0 64px 0
+  @include media('md')
+      flex-direction: column
+  .teaser__item
+    width: calc(50% - 0.5rem)
+    flex-direction: column
+    @include media('md')
+      flex-direction: row
+      width: 100%
+    @include media('sm')
+      flex-direction: column
+  .teaser__figure
+    width: 100%
+    @include media('md')
+      width: 40%
+  .teaser__content
+    width: 100%
+    padding-left: 0
+    @include media('md')
+      width: 60%
+      padding-left: 1rem
+    @include media('sm')
+      width: 100%
+      padding-left: 0
+  .teaser__sub_pre_title
+    margin-top: 9px
+    font-family: inter
+    letter-spacing: 0.3px
+    @include media('sm')
+      text-align: center
+  .teaser__sub_title
+    font-size: 18px
+    margin: 6px 6px 0 0px
+    @include media('sm')
+      text-align: center
+.teaser-one
+  margin-top: 55px !important
+  .teaser__item
+    width: 100%
+    flex-direction: column
+  .teaser__figure
+    width: 100%
+  .teaser__content
+    width: 100%
+    padding-left: 0
+  .teaser__sub_pre_title
+    margin-top: 14px
+  .teaser__sub_title
+    margin-top: 9px
+    font-size: 24px
+    line-height: 28px

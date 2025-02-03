@@ -1,0 +1,46 @@
+.add
+  width: 300px
+  margin-left: 1rem
+  flex-shrink: 0
+  display: flex
+  flex-direction: column
+  &__item
+    width: 300px
+    display: block
+    margin: 44px auto 78px auto
+    position: relative
+    @include media('lg')
+      top: 0 !important
+      margin: 1rem auto
+  &__extra
+    p
+      font-family: Open Sans
+      font-size: 15px
+      font-weight: 600
+      line-height: 17px
+      text-align: left
+      color: var(--fontDarkColor)
+      margin: 4px 0 33px 0
+    img
+      @include media('sm')
+        width: 100svw
+        left: -0.5rem
+        position: relative
+  .tags
+    &__title
+      font-size: 14px
+      margin: 15px 0px 6px 1px
+    .tags__container
+      margin-right: 5px
+      gap: 10px 8px
+      margin-bottom: 51px
+  .teaser-one
+    margin-top: -6px !important
+    .teaser__sub_pre_title
+      margin-top: 8px
+      font-family: inter
+      letter-spacing: 0.3px
+    .teaser__sub_title
+      font-size: 18px
+      margin: 3px 0 0 0
+      line-height: 24px

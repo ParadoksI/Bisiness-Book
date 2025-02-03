@@ -1,0 +1,104 @@
+// Общие
+@import 'media'
+@import 'vendors/_font-face'
+@import '_variables'
+
+// Шрифты
+
+@import 'fonts/open_sans'
+@import 'fonts/inter'
+
+// Компоненты
+  
+@import 'components/header'
+@import 'components/category'
+@import 'components/tags'
+@import 'components/topic-slider'
+
+@import 'components/article'
+@import 'components/add'
+@import 'components/teaser'
+@import 'components/teaser-three'
+@import 'components/breadcrumbs'
+@import 'components/follow-links'
+
+@import 'components/home'
+@import 'components/interessante'
+
+
+
+.--d-flex
+  display: flex
+.--d-block
+  display: block
+.--align-items-center
+  align-items: center
+.--align-items-end
+  align-items: end
+.--text-align-center
+  text-align: center
+.--bg-primary-subtle
+  background-color: var(--accentColor)
+.--justify-content-space-between
+  justify-content: space-between
+.--justify-content-space-around
+  justify-content: space-around
+.--justify-content-space-evenly
+  justify-content: space-evenly
+.--justify-content-center
+  justify-content: center
+.--justify-content-end
+  justify-content: end
+.--flex-direction-column
+  flex-direction: column
+.--fw-wrap
+  flex-wrap: wrap
+.--fw-nowrap
+  flex-wrap: nowrap
+.--text-nowrap
+  text-wrap: nowrap
+.--border-bottom
+  border-bottom: 1px solid #dddddd
+.--border-top
+  border-top: 1px solid #dddddd
+
+.main-structure
+  font-size: 16px
+  background-color: #e2e2e2
+  a
+    text-decoration: none
+  li
+    list-style: none
+  #wrapper_content
+    max-width: 992px
+    margin: auto
+    background-color: var(--bgColor)
+    @include media('lg')
+      width: 100svw
+      max-width: 100svw 
+    main
+      padding: 77px 1rem 1rem 1rem
+      @include media('lg')
+        padding: 77px 0.5rem 1rem 0.5rem
+      > div 
+        @include media('lg')
+          flex-direction: column
+        > div
+          @include media('lg')
+            width: 100% !important
+            margin-left: 0 !important
+
+#article
+  .add__item
+    margin-top: 150px
+    @include media('lg')
+      margin-top: 1rem
+#home
+  .topic-slider .teaser__title
+    margin-bottom: 14px
+  .teaser:not(.teaser-two)
+    margin-top: 46px
+  .add__item
+    margin: -3px auto 0 auto
+    @include media('lg')
+     margin-top: 1rem

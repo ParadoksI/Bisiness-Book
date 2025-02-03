@@ -1,0 +1,77 @@
+.teaser-three
+  width: 100%
+  margin-top: 12px
+  flex-direction: row
+  &__item_container
+    display: flex
+    gap: 1rem
+    flex-direction: row
+    @include media('sm')
+      flex-direction: column
+  &__title
+    font-family: Inter
+    font-size: 18px
+    font-weight: 700
+    line-height: 20px
+    text-align: left
+    color: var(--fontDarkColor)
+    margin: 13px 0 -9px 0
+    letter-spacing: 0.3px
+  &__item
+    padding: 30px 0
+    display: flex
+    text-align: center
+    width: calc(33.3333333333% - (1rem * 4/3) - 1px)
+    flex-direction: column
+    @include media('lg')
+      width: calc(33.3333333333% - 1.3333333333rem - 1px)
+      padding-bottom: 0
+    @include media('md')
+      width: 100%
+      flex-direction: row
+    @include media('sm')
+      flex-direction: column
+      width: 100%
+  &__figure
+    width: 100%
+    flex-shrink: 0
+    margin: 0
+    @include media('md')
+      width: 250px
+    @include media('sm')
+      width: 100%
+  &__content
+    padding-left: 1rem
+    margin: 0
+    background: #fff7ef
+  &__sub_pre_title
+    font-family: Inter
+    font-size: 14px
+    font-weight: 700
+    line-height: 13px
+    text-align: left
+    color: var(--fontHighlightColor)
+    margin: 0
+    letter-spacing: 0.3px
+    margin-top: 16px
+    @include media('sm')
+      margin-top: 1rem
+  &__sub_title
+    font-family: Rufina
+    font-weight: 700
+    text-align: left
+    color: var(--fontDarkColor)
+    margin-top: 10px
+    font-size: 22px
+    line-height: 28px
+    margin: 5px 5px 0 0px
+  &__description
+    font-family: Inter
+    font-size: 16px
+    font-weight: 400
+    line-height: 20px
+    text-align: left
+    color: var(--fontDarkColor)
+    margin-top: 6px
+    letter-spacing: 0.5px
+

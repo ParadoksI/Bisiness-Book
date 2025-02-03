@@ -1,0 +1,42 @@
+.category
+  width: calc(100% - 316px)
+  @include media('lg')
+    padding-right: 0
+  &__title
+    font-family: Open Sans
+    font-size: 22px
+    font-weight: 700
+    line-height: 32px
+    color: var(--fontDarkColor)
+    margin: 6px 0 0 0px
+  &__figure
+    margin: 6px 0 42px 0
+    img
+      @include media('sm')
+        width: 100svw
+        left: -0.5rem
+        position: relative
+  &__sub_pre_title
+    font-family: Inter
+    font-size: 14px
+    font-weight: 700
+    line-height: 20px
+    color: var(--fontHighlightColor)
+    padding-top: 10px
+    letter-spacing: 0.3px
+  &__sub_title
+    font-family: Open Sans
+    font-size: 26px
+    font-weight: 600
+    line-height: 30px
+    color: var(--fontDarkColor)
+    margin-top: 4px
+    @include media('lg')
+      font-size: calc(1.2vw + 18px)
+      line-height: calc(1.2vw + 22px)
+  &__desc
+    font-family: Open Sans
+    font-size: 18px
+    font-weight: 500
+    line-height: 24px
+    margin-top: 13px
