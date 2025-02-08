@@ -70,7 +70,7 @@
   li
     list-style: none
   #wrapper_content
-    max-width: 992px
+    max-width: 1024px
     margin: auto
     background-color: var(--bgColor)
     @include media('lg')
@@ -79,14 +79,27 @@
     main
       padding: 77px 1rem 1rem 1rem
       @include media('lg')
-        padding: 77px 0.5rem 1rem 0.5rem
+        padding: 77px 1rem 1rem 1rem
+      @include media('sm')
+        padding: 61px 0px 1rem 0px
       > div 
         @include media('lg')
           flex-direction: column
+      .home__wrapper
+        flex-direction: row
+        @include media('lg')
+          flex-direction: row
+          gap: 1rem
+        @include media('md')
+          flex-direction: column
         > div
           @include media('lg')
-            width: 100% !important
+            
             margin-left: 0 !important
+      .category__wrapper
+        flex-direction: row
+        @include media('lg')
+          flex-direction: row
 
 #article
   .add__item
@@ -100,5 +113,4 @@
     margin-top: 46px
   .add__item
     margin: -3px auto 0 auto
-    @include media('lg')
-     margin-top: 1rem
+    

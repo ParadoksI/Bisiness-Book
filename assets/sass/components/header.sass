@@ -8,6 +8,8 @@
   width: 100%
   left: 0
   justify-content: center
+  @include media('sm')
+    padding: 9px 0rem 0 0rem
   &__container
     display: flex
     width: 992px
@@ -15,7 +17,11 @@
     padding-bottom: 11px
     @include media('lg')
       width: 100%
-      padding: 0 0.5rem 11px 0.5rem
+      padding: 0 1rem 11px 0
+      margin: 0 0 0 1rem
+    @include media('sm')
+      padding: 0 0px 7px 0
+      margin: 0 9px 0 9px
   &__links_container
     display: flex
     justify-content: space-between
@@ -29,10 +35,18 @@
     text-align: left
   &__nav 
     width: 100%
-    margin: 0 26px 0 3px
-    @include media('md')
+    margin: 0 26px 0 0px
+    display: flex
+    align-items: center
+    padding: 0px 0px 0px 60px
+    @include media('lg')
+      padding: 0px 0px 0px 44px
+    @include media('sm')
       display: none
+      padding: 0px
     ul
+      gap: 20px
+      display: flex
       li a
         color: var(--fontDarkColor)
         font-family: Open Sans
@@ -41,7 +55,10 @@
         line-height: 20px
         text-align: left
         position: relative
-        top: 7px
+        transition: 0.3s color ease
+        &:hover
+          color: var(--fontHighlightColor-mod)
+        
   &__categories
     a
       color: var(--fontDarkColor)
@@ -58,15 +75,20 @@
     padding: 0
     border: none
     background-color: transparent
+    display: none
+    @include media('lg')
+      display: flex
   &__fa-menu-line
-    background-color: #dddddd
+    background-color: var(--fontDarkColor)
     height: 3px
     width: 18px
   &__line
     width: 1px
-    height: 22px
-    background-color: #dddddd
+    height: 28px
+    background-color: var(--fontDarkColor)
     margin: 0 19px 0 15px
     position: relative
     top: 50%
-    transform: translateY(-50%)
+    display: none
+    @include media('lg')
+      display: block

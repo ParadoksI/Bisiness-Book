@@ -1,15 +1,13 @@
 .interessante
-    &__title
-        font-family: Open Sans
-        font-size: 14px
-        font-weight: 700
-        line-height: 32px
-        text-align: left
-        color: var(--fontDarkColor)
-        margin: 37px 0px 3px 1px
     &__item-container
         margin: 0 0 13px 0px
         padding-bottom: 13px
+        &:first-child
+            margin: 46px 0px 13px 0px
+            @include media('lg')
+                margin: 42px 0px 13px 0px
+        &:not(:last-child)
+            border-bottom: 1px solid var(--lineColor)
     &__item
         font-family: Open Sans
         font-size: 18px

@@ -2,6 +2,8 @@
   flex-direction: column
   width: 100%
   margin-top: 22px
+  @include media('sm')
+    padding: 0px 9px
   .teaser__item_container
     display: flex
     gap: 15px
@@ -15,6 +17,10 @@
     text-align: start
     color: var(--fontDarkColor)
     margin: -33px 0 9px 0
+    &-mod 
+      margin: -33px 0 35px 0
+      @include media('sm')
+        margin: -33px 0 6px 0
   &__item
     padding: 7px 0
     display: flex
@@ -23,24 +29,41 @@
     @include media('md')
       flex-direction: row
     @include media('sm')
-      flex-direction: column
+      flex-direction: row
       width: 100%
+    &:hover .teaser__sub_title
+      text-decoration: underline
   &__figure
     width: 250px
     flex-shrink: 0
     margin: 0
-    @include media('md')
-      flex-direction: 250px
+   
     @include media('sm')
       width: 100%
-    img
+    &-mod 
+      @include media('lg')
+        width: 186px
+      @include media('md')
+        width: 284px
       @include media('sm')
-        width: 100svw
-        left: -0.5rem
-        position: relative
+        width: 185px
+
+    &-dropshw
+      img
+        box-shadow: 0px 4px 4px var(--dropShadow)
   &__content
     padding-left: 1rem
     margin: 0
+    @include media('lg')
+      padding-left: 11px
+    &-mod 
+      @include media('md')
+        background: var(--bgStandartColor)
+        padding-left: 16px !important 
+        padding-bottom: 12px
+      @include media('sm')
+        padding-left: 10px !important
+        background: transparent
       
   &__sub_pre_title
     font-family: Open sans
@@ -50,8 +73,7 @@
     text-align: left
     color: var(--fontHighlightColor)
     margin-top: 2px
-    @include media('sm')
-      margin-top: 1rem
+    
   &__sub_title
     font-family: Open sans
     font-size: 20px
@@ -60,6 +82,33 @@
     text-align: left
     color: var(--fontDarkColor)
     margin: 8px 18px 0 0
+    @include media('lg')
+      font-size: 17px
+      line-height: 21px
+      margin: 2px 18px 0 0
+    &-category 
+      font-size: 26px !important
+      font-weight: 700
+      line-height: 32px
+      margin-bottom: 11px
+      margin-top: 5px
+      margin-right: 0
+      @include media('sm')
+        font-size: 20px !important
+        line-height: 21px
+        
+
+  &__sub_disc
+    font-family: "Open Sans"
+    font-size: 18px
+    font-weight: 500
+    line-height: 24px
+    color: var(--fontDarkColor)
+    text-align: left
+    @include media('sm')
+      font-size: 14px
+      line-height: 20px
+
   &__description
     font-family: Inter
     font-size: 16px
@@ -69,6 +118,22 @@
     color: var(--fontDarkColor)
     margin-top: 6px
     letter-spacing: 0.5px
+  &-up-to-add 
+    margin: 46px 0px 72px 0px
+    @include media('md')
+      margin: 46px 0px 82px 0px
+    @include media('sm')
+      margin: 46px 0px 70px 0px
+  &__category
+    margin-top: 45px !important
+    @include media('lg')
+      margin-top: 30px !important
+  &__add
+    width: 300px
+    margin: 56px auto
+    @include media('lg')
+      margin: 40px auto
+
 
 .teaser-row
   display: flex
@@ -86,7 +151,7 @@
       position: unset
   .teaser__content
     width: 100%
-    background: #F2F7FF
+    background: var(--bgStandartColor)
     height: 246px
     .teaser__sub_pre_title
       font-family: Inter
@@ -98,27 +163,40 @@
 
 .teaser-two
   flex-direction: row
-  margin: -10px 0 64px 0
+  margin: -10px 0 46px 0
+  @include media('lg')
+    margin: 1rem 0 38px 0
   @include media('md')
-      flex-direction: column
+    flex-direction: row
+    margin: 19px 0 47px 0
+    flex-wrap: nowrap !important
+    gap: 17px
+  @include media('sm')
+    margin: 19px 0 40px 0
   .teaser__item
     width: calc(50% - 0.5rem)
     flex-direction: column
     @include media('md')
-      flex-direction: row
+      flex-direction: column
       width: 100%
     @include media('sm')
       flex-direction: column
   .teaser__figure
     width: 100%
     @include media('md')
-      width: 40%
+      width: 100%
+      height: 201.94px
+    @include media('sm')
+      height: 126px
+    img
+      @include media('md')
+        height: 100%
   .teaser__content
     width: 100%
     padding-left: 0
     @include media('md')
-      width: 60%
-      padding-left: 1rem
+      width: 100%
+      
     @include media('sm')
       width: 100%
       padding-left: 0
@@ -127,12 +205,23 @@
     font-family: inter
     letter-spacing: 0.3px
     @include media('sm')
-      text-align: center
+      text-align: left
+      margin-top: 3px
+      line-height: 20px
   .teaser__sub_title
     font-size: 18px
     margin: 6px 6px 0 0px
+    @include media('lg')
+      font-size: 16px
+      line-height: 22px
+      margin: 1px 0px 0 0
+      max-width: 202px
+    @include media('md')
+      max-width: 304px
+      font-size: 18px
     @include media('sm')
-      text-align: center
+      text-align: left
+      font-size: 16px
 .teaser-one
   margin-top: 55px !important
   .teaser__item
@@ -149,3 +238,7 @@
     margin-top: 9px
     font-size: 24px
     line-height: 28px
+    @include media('md')
+      font-size: 20px
+      line-height: 24px
+  

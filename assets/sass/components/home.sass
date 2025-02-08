@@ -1,7 +1,11 @@
 .home
   width: calc(100% - 316px)
+  display: flex
+  flex-direction: column
   @include media('lg')
     padding-right: 0
+  @include media('md')
+    width: auto
   &__title
     font-family: Open Sans
     font-size: 26px
@@ -11,15 +15,23 @@
     color: var(--fontDarkColor)
     margin: 11px 0 0 0px
   &__intro
-    margin: 1px 0 35px 0
+    margin: 1px 0 1rem 0
+    @include media('lg')
+      margin: 1px 0 0 0
+    &:hover .home__intro__title 
+      text-decoration: underline
     img
       @include media('sm')
         width: 100svw
-        left: -0.5rem
+        
         position: relative
     &__content
-        background:#F2F7FF
+        background: var(--bgStandartColor)
         height: 157px
+        @include media('md')
+          height: auto
+          padding-bottom: 12px
+        
     &__pre_title
         font-family: Inter
         font-size: 14px
@@ -29,6 +41,15 @@
         color: var(--fontHighlightColor)
         padding-top: 18px
         letter-spacing: 0.3px
+        @include media('lg')
+          text-align: left
+          margin-left: 16px
+          padding-top: 14px
+        @include media('md')
+          padding-top: 11px 
+        @include media('sm')
+          margin-left: 9px
+          padding-top: 6px 
     &__title
         font-family: Open Sans
         font-size: 26px
@@ -38,9 +59,19 @@
         color: var(--fontDarkColor)
         margin: 4px 40px 0 40px
         @include media('lg')
-            font-size: calc(1.5vw + 14px)
-            line-height: calc(2.4vw + 15px)
-            margin: 5px 3vw 0 3vw
+          font-size: 20px
+          line-height: 26px
+          text-align: left
+          margin: 4px 23px 0px 16px
+          max-width: 381px
+        @include media('md')
+          max-width: 100%
+          margin: 2px 23px 0px 16px
+        @include media('sm')
+          margin: 2px 23px 0px 9px
+          font-size: 17px
+          line-height: 21px
+
   &__figure-label
     font-family: Inter
     font-size: 15px
