@@ -61,6 +61,9 @@
   border-bottom: 1px solid #dddddd
 .--border-top
   border-top: 1px solid #dddddd
+.--qiker
+  font-family: "Inter"
+  font-weight: 700
 
 .main-structure
   font-size: 16px
@@ -109,8 +112,16 @@
 #home
   .topic-slider .teaser__title
     margin-bottom: 14px
+    
   .teaser:not(.teaser-two)
     margin-top: 46px
   .add__item
     margin: -3px auto 0 auto
-    
+
+#category
+  main 
+    padding: 73px 1rem 1rem 1rem !important
+    @include media('lg')
+      padding: 77px 1rem 1rem 1rem
+    @include media('sm')
+      padding: 61px 0px 1rem 0px !important

@@ -15,11 +15,10 @@
     color: var(--fontDarkColor)
     margin: 11px 0 0 0px
   &__intro
-    margin: 1px 0 1rem 0
+    margin: 1px 0 19px 0
     @include media('lg')
       margin: 1px 0 0 0
-    &:hover .home__intro__title 
-      text-decoration: underline
+    
     img
       @include media('sm')
         width: 100svw
@@ -27,48 +26,48 @@
         position: relative
     &__content
         background: var(--bgStandartColor)
-        height: 157px
+        height: 136px
+        padding: 1rem
+        @include media('lg')
+          height: auto
         @include media('md')
           height: auto
-          padding-bottom: 12px
+          padding: 11px 1rem 12px
+        @include media('sm')
+          padding: 6px 10px 10px 10px
         
     &__pre_title
         font-family: Inter
         font-size: 14px
         font-weight: 700
         line-height: 20px
-        text-align: center
+        text-align: left
         color: var(--fontHighlightColor)
-        padding-top: 18px
+        padding-top: 3px
         letter-spacing: 0.3px
         @include media('lg')
           text-align: left
-          margin-left: 16px
-          padding-top: 14px
-        @include media('md')
-          padding-top: 11px 
-        @include media('sm')
-          margin-left: 9px
-          padding-top: 6px 
+          padding-top: 0px
     &__title
         font-family: Open Sans
-        font-size: 26px
+        font-size: 22px
         font-weight: 500
-        line-height: 30px
-        text-align: center
+        line-height: 28px
+        text-align: left
         color: var(--fontDarkColor)
-        margin: 4px 40px 0 40px
+        
         @include media('lg')
           font-size: 20px
           line-height: 26px
           text-align: left
-          margin: 4px 23px 0px 16px
-          max-width: 381px
+          padding-top: 4px
+          width: 95%
         @include media('md')
           max-width: 100%
-          margin: 2px 23px 0px 16px
+          padding-top: 2px
+          line-height: 24px
         @include media('sm')
-          margin: 2px 23px 0px 9px
+          
           font-size: 17px
           line-height: 21px
 

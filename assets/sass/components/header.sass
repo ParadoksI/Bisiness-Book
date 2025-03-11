@@ -1,13 +1,17 @@
 .header
   display: flex
-  padding: 15px 0rem 0 0rem
-  margin: 0 0 1rem 0
+  padding: 15px 1rem 0 1rem
+  margin: 0 auto 1rem auto
   position: fixed
   background: var(--bgColor)
   z-index: 2
   width: 100%
-  left: 0
+  left: 50%
+  transform: translateX(-50%)
   justify-content: center
+  max-width: 1023px
+  @include media('lg')
+    padding: 15px 0rem 0 0rem
   @include media('sm')
     padding: 9px 0rem 0 0rem
   &__container
@@ -21,18 +25,18 @@
       margin: 0 0 0 1rem
     @include media('sm')
       padding: 0 0px 7px 0
-      margin: 0 9px 0 9px
+      margin: 0 10px 0 10px
   &__links_container
     display: flex
     justify-content: space-between
     width: 100%
+    @include media('md')
+      justify-content: start !important
   &__logo
     color: var(--fontDarkColor)
     font-family: Open Sans
-    font-size: 20px
-    font-weight: 800
-    line-height: 17px
-    text-align: left
+    height: 34px
+    min-width: 90px
   &__nav 
     width: 100%
     margin: 0 26px 0 0px
@@ -40,13 +44,15 @@
     align-items: center
     padding: 0px 0px 0px 60px
     @include media('lg')
-      padding: 0px 0px 0px 44px
+      padding: 0px 0px 0px 0px
+      margin: 0px 0px 0px 44px
+      overflow-x: scroll
     @include media('sm')
       display: none
       padding: 0px
     ul
       gap: 20px
-      display: flex
+      display: flex     
       li a
         color: var(--fontDarkColor)
         font-family: Open Sans
@@ -73,9 +79,10 @@
   &__fa-menu
     height: 15px
     padding: 0
+    min-width: 17px
     border: none
     background-color: transparent
-    display: none
+    display: flex
     @include media('lg')
       display: flex
   &__fa-menu-line
@@ -84,11 +91,12 @@
     width: 18px
   &__line
     width: 1px
+    min-width: 1px
     height: 28px
     background-color: var(--fontDarkColor)
     margin: 0 19px 0 15px
     position: relative
     top: 50%
-    display: none
+    display: block
     @include media('lg')
       display: block

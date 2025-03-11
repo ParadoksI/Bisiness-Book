@@ -3,7 +3,7 @@
   width: 100%
   margin-top: 22px
   @include media('sm')
-    padding: 0px 9px
+    padding: 0px 10px
   .teaser__item_container
     display: flex
     gap: 15px
@@ -21,6 +21,11 @@
       margin: -33px 0 35px 0
       @include media('sm')
         margin: -33px 0 6px 0
+    &-special
+      margin: -33px 0 9px 0
+    &-modify
+      font-size: 24px
+      margin: -21px 0 9px 0
   &__item
     padding: 7px 0
     display: flex
@@ -31,8 +36,6 @@
     @include media('sm')
       flex-direction: row
       width: 100%
-    &:hover .teaser__sub_title
-      text-decoration: underline
   &__figure
     width: 250px
     flex-shrink: 0
@@ -47,10 +50,12 @@
         width: 284px
       @include media('sm')
         width: 185px
+        height: 125px
+        img
+          height: 100%
+          object-fit: cover
 
-    &-dropshw
-      img
-        box-shadow: 0px 4px 4px var(--dropShadow)
+    
   &__content
     padding-left: 1rem
     margin: 0
@@ -64,6 +69,9 @@
       @include media('sm')
         padding-left: 10px !important
         background: transparent
+      &-color 
+        @include media('md')
+          background: transparent
       
   &__sub_pre_title
     font-family: Open sans
@@ -119,13 +127,13 @@
     margin-top: 6px
     letter-spacing: 0.5px
   &-up-to-add 
-    margin: 46px 0px 72px 0px
+    margin: 46px 0px 46px 0px
     @include media('md')
       margin: 46px 0px 82px 0px
     @include media('sm')
       margin: 46px 0px 70px 0px
   &__category
-    margin-top: 45px !important
+    margin-top: 38px !important
     @include media('lg')
       margin-top: 30px !important
   &__add
@@ -165,10 +173,10 @@
   flex-direction: row
   margin: -10px 0 46px 0
   @include media('lg')
-    margin: 1rem 0 38px 0
+    margin: 9px 0 38px 0
   @include media('md')
     flex-direction: row
-    margin: 19px 0 47px 0
+    margin: 9px 0 47px 0
     flex-wrap: nowrap !important
     gap: 17px
   @include media('sm')
@@ -218,12 +226,12 @@
       max-width: 202px
     @include media('md')
       max-width: 304px
-      font-size: 18px
+      font-size: 16px
     @include media('sm')
       text-align: left
       font-size: 16px
 .teaser-one
-  margin-top: 55px !important
+  margin-top: 29px !important
   .teaser__item
     width: 100%
     flex-direction: column
@@ -236,9 +244,15 @@
     margin-top: 14px
   .teaser__sub_title
     margin-top: 9px
-    font-size: 24px
+    font-size: 22px
     line-height: 28px
+    @include media('lg')
+      font-size: 18px
+      line-height: 24px
     @include media('md')
       font-size: 20px
       line-height: 24px
+    @include media('sm')
+      font-size: 17px
+      line-height: 21px
   

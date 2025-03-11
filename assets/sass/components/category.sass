@@ -5,14 +5,14 @@
     width: 100%
   &__title
     font-family: Open Sans
-    font-size: 22px
+    font-size: 24px
     font-weight: 700
     line-height: 32px
     color: var(--fontDarkColor)
-    margin: 6px 0 0 0px
+    
     position: relative
     @include media('sm')
-      margin: 0 9px
+      padding: 0rem 10px
     &::after 
       content: ""
       position: absolute
@@ -24,8 +24,7 @@
 
   &__figure
     margin: 22px 0 36px 0
-    &:hover .category__content a
-      text-decoration: underline
+    
     
   &__sub_pre_title
     font-family: Inter
@@ -54,5 +53,5 @@
     color: var(--fontDarkColor)
   &__content
     @include media('sm')
-      padding: 0 9px
+      padding: 0 10px
     

@@ -22,7 +22,7 @@
       @include media('lg')
         margin: 25px 0px 0px 0px !important
     &-category
-      margin: 60px 0px 19px 0px   
+      margin: 54px 0px 0px 0px   
   &__extra
     p
       font-family: Open Sans
@@ -50,7 +50,7 @@
       &-figure 
         margin: 0
     &-title 
-      font-family: Open sans
+      font-family: inter
       font-size: 14px
       font-weight: 700
       line-height: 13px
@@ -59,10 +59,11 @@
       
     &-disc 
       font-family: Open sans
-      font-size: 20px
+      font-size: 18px
       font-weight: 500
       line-height: 24px
       text-align: left
+      padding: 3px 0px 0px 0px
       color: var(--fontDarkColor)
   
 
@@ -95,6 +96,10 @@
   &__block-category
     display: flex
     flex-direction: column
+    &:nth-child(2)
+      margin-top: -6px
+    &:nth-child(3)
+      margin-top: 6px
     &-figure
       margin: 0 
     &-title
@@ -113,6 +118,7 @@
       text-align: left
       color: var(--fontDarkColor)
       max-width: 294px
+      margin-top: 3px
   &__subtitle
     font-family: "Open Sans"
     font-size: 18px
