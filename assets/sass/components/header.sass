@@ -21,22 +21,30 @@
     padding-bottom: 11px
     @include media('lg')
       width: 100%
-      padding: 0 1rem 11px 0
-      margin: 0 0 0 1rem
+      padding: 0 0 11px 0
+      margin: 0 1rem 0 1rem
+      max-width: calc( 100% - 2rem )
     @include media('sm')
       padding: 0 0px 7px 0
       margin: 0 10px 0 10px
+      max-width: none
   &__links_container
     display: flex
     justify-content: space-between
     width: 100%
+    max-width: max-content
     @include media('md')
       justify-content: start !important
+    @include media('sm')
+      width: 100%
+      max-width: none
   &__logo
     color: var(--fontDarkColor)
     font-family: Open Sans
     height: 34px
     min-width: 90px
+    @include media('sm')
+      width: 89px
   &__nav 
     width: 100%
     margin: 0 26px 0 0px
@@ -47,6 +55,10 @@
       padding: 0px 0px 0px 0px
       margin: 0px 0px 0px 44px
       overflow-x: scroll
+      overflow-y: hidden
+      &::-webkit-scrollbar 
+        display: none
+      
     @include media('sm')
       display: none
       padding: 0px
